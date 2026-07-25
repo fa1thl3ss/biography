@@ -1,0 +1,26 @@
+---
+import SocialLinks from "../components/SocialLinks";
+import "../styles/global.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.svg" />
+		<meta name="color-scheme" content="dark" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>༘ ⋆｡˚‧⋆</title>
+	</head>
+	<body>
+		<main>
+			<h1 class="otter">🦦</h1>
+			<p class="info" id="info"></p>
+			<SocialLinks client:load />
+		</main>
+		<script>
+			import "../scripts/weather.ts";
+		</script>
+	</body>
+</html>

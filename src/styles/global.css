@@ -1,0 +1,186 @@
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoLight.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoLightItalic.otf") format("opentype");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoRegular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoRegularItalic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoMedium.otf") format("opentype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoMediumItalic.otf") format("opentype");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoSemibold.otf") format("opentype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoSemiboldItalic.otf") format("opentype");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoBold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoBoldItalic.otf") format("opentype");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoHeavy.otf") format("opentype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "SF Mono";
+	src: url("/fonts/SFMonoHeavyItalic.otf") format("opentype");
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+:root {
+	--font-mono:
+		"SF Mono", SFMono-Regular, ui-monospace, "Menlo", "Consolas",
+		"Liberation Mono", monospace;
+	--bg: #0d0d0f;
+	--fg: #e8e8ea;
+	--muted: #8a8a90;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+	font-family: var(--font-mono);
+	display: grid;
+	place-items: center;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.otter {
+	font-size: clamp(2rem, 8vw, 4rem);
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	margin: 0;
+}
+
+.info {
+	color: var(--muted);
+	font-size: 0.8rem;
+	letter-spacing: 0.02em;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	font-variant-numeric: tabular-nums;
+}
+
+.socials {
+	display: flex;
+	gap: 0.75rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 0.5rem;
+}
+
+.social {
+	font-family: inherit;
+	font-size: 0.8rem;
+	letter-spacing: 0.02em;
+	color: var(--muted);
+	text-decoration: none;
+	padding: 0.4rem 0.9rem;
+	border: 1px solid var(--muted);
+	border-radius: 0.4rem;
+	background: transparent;
+	cursor: pointer;
+	transition:
+		color 150ms ease,
+		border-color 150ms ease,
+		background 150ms ease;
+}
+
+.social:hover {
+	color: var(--fg);
+	border-color: var(--fg);
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.social:focus-visible {
+	outline: 1px solid var(--fg);
+	outline-offset: 2px;
+}
